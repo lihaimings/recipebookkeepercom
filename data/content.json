@@ -1,0 +1,90 @@
+{
+  "recipeCategories": [
+    {
+      "id": "1",
+      "name": "Appetizers"
+    },
+    {
+      "id": "2",
+      "name": "Salads"
+    },
+    {
+      "id": "3",
+      "name": "Soups"
+    },
+    {
+      "id": "4",
+      "name": "Main Courses"
+    },
+    {
+      "id": "5",
+      "name": "Desserts"
+    }
+  ],
+  "tags": [
+    {
+      "id": "1",
+      "name": "Vegan"
+    },
+    {
+      "id": "2",
+      "name": "Gluten-Free"
+    },
+    {
+      "id": "3",
+      "name": "Healthy"
+    },
+    {
+      "id": "4",
+      "name": "Quick Meal"
+    },
+    {
+      "id": "5",
+      "name": "Authentic"
+    }
+  ],
+  "cookingMethods": [
+    {
+      "id": "1",
+      "name": "Baking"
+    },
+    {
+      "id": "2",
+      "name": "Frying"
+    },
+    {
+      "id": "3",
+      "name": "Grilling"
+    },
+    {
+      "id": "4",
+      "name": "Boiling"
+    },
+    {
+      "id": "5",
+      "name": "Steaming"
+    }
+  ],
+  "ingredientUnits": [
+    {
+      "id": "1",
+      "name": "Cups"
+    },
+    {
+      "id": "2",
+      "name": "Spoons"
+    },
+    {
+      "id": "3",
+      "name": "Tablespoons"
+    },
+    {
+      "id": "4",
+      "name": "Grams"
+    },
+    {
+      "id": "5",
+      "name": "Kilograms"
+    }
+  ]
+}
