@@ -1,28 +1,4 @@
 {
-  "recipes": [
-    {
-      "id": 1,
-      "title": "Grilled Salmon",
-      "description": "Delicious grilled salmon with a side of lemon butter sauce.",
-      "category_id": 2,
-      "tags": [
-        "seafood",
-        "dinner"
-      ],
-      "instructions": "Preheat grill. Season salmon and cook for 8-10 minutes."
-    },
-    {
-      "id": 2,
-      "title": "Pancakes",
-      "description": "Classic American pancakes with a twist.",
-      "category_id": 3,
-      "tags": [
-        "breakfast",
-        "dessert"
-      ],
-      "instructions": "Mix batter, cook in pan until golden."
-    }
-  ],
   "categories": [
     {
       "id": 1,
@@ -30,41 +6,63 @@
     },
     {
       "id": 2,
-      "name": "Main Courses"
+      "name": "Salads"
     },
     {
       "id": 3,
+      "name": "Main Courses"
+    },
+    {
+      "id": 4,
       "name": "Desserts"
+    },
+    {
+      "id": 5,
+      "name": "Beverages"
     }
   ],
   "tags": [
     {
       "id": 1,
-      "name": "seafood"
+      "name": "Vegetarian"
     },
     {
       "id": 2,
-      "name": "dinner"
+      "name": "Gluten-Free"
     },
     {
       "id": 3,
-      "name": "breakfast"
+      "name": "Healthy"
     },
     {
       "id": 4,
-      "name": "dessert"
+      "name": "Quick Meal"
+    },
+    {
+      "id": 5,
+      "name": "DIY"
     }
   ],
-  "users": [
+  "cooking_methods": [
     {
       "id": 1,
-      "username": "johndoe",
-      "email": "john@example.com"
+      "name": "Grilling"
     },
     {
       "id": 2,
-      "username": "janedoe",
-      "email": "jane@example.com"
+      "name": "Baking"
+    },
+    {
+      "id": 3,
+      "name": "Frying"
+    },
+    {
+      "id": 4,
+      "name": "Steaming"
+    },
+    {
+      "id": 5,
+      "name": "Roasting"
     }
   ]
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { IconArrowRight, IconCheck, IconRepeat, IconTarget, IconBolt } from "@tabler/icons-react";
 import ToolComponent from "@/components/tool/ToolComponent";
