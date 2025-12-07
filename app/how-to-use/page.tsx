@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -30,11 +28,8 @@ export default function HowToUsePage() {
           </div>
           <div className="card flex-1">
             <h3 className="hidden sm:block text-xl font-semibold text-gray-900 mb-2">
-              Generate a grocery list or meal plan
-            </h3>
-            <p className="hidden sm:block text-xl font-semibold text-gray-900 mb-2">
               Search for a recipe
-            </p>
+            </h3>
             <p className="text-gray-600 mb-2">
               Display a list of matching recipes
             </p>

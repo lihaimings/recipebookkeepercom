@@ -48,29 +48,29 @@ export default function ToolComponent() {
         {/* Input Fields */}
         
           <div>
-            <label htmlFor="recipeName" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="Recipe Name" className="block text-sm font-medium text-gray-700 mb-2">
               Recipe Name
             </label>
             <input
               type="text"
-              id="recipeName"
-              name="recipeName"
+              id="Recipe Name"
+              name="Recipe Name"
               placeholder="Enter recipe name"
               className="input"
-              value={formData['recipeName'] || ''}
+              value={formData.Recipe Name || ''}
               onChange={handleChange}
             />
           </div>
 
           <div>
-            <label htmlFor="cookingMethod" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="Cooking Method" className="block text-sm font-medium text-gray-700 mb-2">
               Cooking Method
             </label>
             <select
-              id="cookingMethod"
-              name="cookingMethod"
+              id="Cooking Method"
+              name="Cooking Method"
               className="input"
-              value={formData['cookingMethod'] || ''}
+              value={formData.Cooking Method || ''}
               onChange={handleChange}
             >
               <option value="">Select...</option>
