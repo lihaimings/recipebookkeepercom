@@ -53,11 +53,11 @@ export default function ToolComponent() {
             </label>
             <input
               type="text"
-              id="Recipe Name"
-              name="Recipe Name"
+              id="recipeName"
+              name="recipeName"
               placeholder="Enter recipe name"
               className="input"
-              value={formData['Recipe Name'] || ''}
+              value={formData['recipeName'] || ''}
               onChange={handleChange}
             />
           </div>
@@ -67,10 +67,10 @@ export default function ToolComponent() {
               Cooking Method
             </label>
             <select
-              id="Cooking Method"
-              name="Cooking Method"
+              id="cookingMethod"
+              name="cookingMethod"
               className="input"
-              value={formData['Cooking Method'] || ''}
+              value={formData['cookingMethod'] || ''}
               onChange={handleChange}
             >
               <option value="">Select...</option>

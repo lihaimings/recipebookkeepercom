@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { IconArrowRight, IconCheck, IconRepeat, IconTarget, IconBolt } from "@tabler/icons-react";
+import { IconArrowRight, IconRepeat, IconTarget, IconBolt } from "@tabler/icons-react";
 import ToolComponent from "@/components/tool/ToolComponent";
 
 export default function HomePage() {
@@ -46,7 +46,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Recipe Bookkeeper?
             </h2>
-<p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Powerful features designed to make your work easier
             </p>
           </div>
