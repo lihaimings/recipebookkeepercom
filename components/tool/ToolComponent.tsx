@@ -57,7 +57,7 @@ export default function ToolComponent() {
               name="Recipe Name"
               placeholder="Enter recipe name"
               className="input"
-              value={formData.Recipe Name || ''}
+              value={formData['Recipe Name'] || ''}
               onChange={handleChange}
             />
           </div>
@@ -70,7 +70,7 @@ export default function ToolComponent() {
               id="Cooking Method"
               name="Cooking Method"
               className="input"
-              value={formData.Cooking Method || ''}
+              value={formData['Cooking Method'] || ''}
               onChange={handleChange}
             >
               <option value="">Select...</option>
