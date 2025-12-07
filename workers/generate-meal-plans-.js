@@ -3,40 +3,37 @@ addEventListener('fetch', event => {
 })
 
 async function handleRequest(request) {
-  const url = new URL(request.url);
-  const path = url.pathname;
-
-  if (path === '/meal-plan' && request.method === 'POST') {
-    try {
-      const body = await request.json();
-      const mealPlan = generateMealPlan(body.recipes);
-      return new Response(JSON.stringify(mealPlan), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
-    } catch (error) {
-      return new Response(JSON.stringify({ error: 'Invalid input' }), { status: 400, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
-    }
+  if (request.method !== 'POST') {
+    return new Response('Method Not Allowed', { status: 405 })
   }
 
-  if (path === '/grocery-list' && request.method === 'POST') {
-    try {
-      const body = await request.json();
-      const groceryList = generateGroceryList(body.recipes);
-      return new Response(JSON.stringify(groceryList), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
-    } catch (error) {
-      return new Response(JSON.stringify({ error: 'Invalid input' }), { status: 400, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
-    }
+  const corsHeaders = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type'
   }
 
-  return new Response(JSON.stringify({ error: 'Not found' }), { status: 404, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+  if (request.headers.get('Origin') !== null) {
+    request = new Request(request.url, {
+      headers: request.headers,
+      method: request.method
+    })
+  }
+
+  try {
+    const body = await request.json()
+    const mealPlan = generateMealPlan(body.recipes)
+    return new Response(JSON.stringify(mealPlan), { status: 200, headers: corsHeaders })
+  } catch (error) {
+    return new Response(JSON.stringify({ error: 'Invalid input' }), { status: 400, headers: corsHeaders })
+  }
 }
 
 function generateMealPlan(recipes) {
-  // Implement meal plan generation logic here
-  return { meals: recipes.map(recipe => ({ name: recipe.name, time: recipe.time })) };
-}
-
-function generateGroceryList(recipes) {
-  // Implement grocery list generation logic here
-  const ingredients = new Set();
-  recipes.forEach(recipe => recipe.ingredients.forEach(ingredient => ingredients.add(ingredient)));
-  return { items: Array.from(ingredients) };
+  // Placeholder for meal plan generation logic
+  const mealPlan = recipes.map(recipe => ({
+    name: recipe.name,
+    ingredients: recipe.ingredients
+  }))
+  return mealPlan
 }

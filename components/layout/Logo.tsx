@@ -31,7 +31,7 @@ export default function Logo({
       className={`
         ${sizes[size].container} 
         rounded-lg rotate-45 
-        bg-gradient-to-r from-primary_color_name-400 to-primary_color_name-600
+        bg-gradient-to-r from-primary-400 to-primary-600
         flex items-center justify-center 
         shadow-lg shadow-primary-500/30
         ${animated ? "transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary-500/40" : ""}
@@ -50,7 +50,7 @@ export default function Logo({
       className={`
         ${sizes[size].container} 
         rounded-full
-        bg-gradient-to-r from-primary_color_name-400 to-primary_color_name-600
+        bg-gradient-to-r from-primary-400 to-primary-600
         flex items-center justify-center 
         shadow-lg shadow-primary-500/30
         font-bold text-white

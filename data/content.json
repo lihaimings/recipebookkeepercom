@@ -1,90 +1,32 @@
 {
-  "recipeCategories": [
-    {
-      "id": "1",
-      "name": "Appetizers"
-    },
-    {
-      "id": "2",
-      "name": "Salads"
-    },
-    {
-      "id": "3",
-      "name": "Soups"
-    },
-    {
-      "id": "4",
-      "name": "Main Courses"
-    },
-    {
-      "id": "5",
-      "name": "Desserts"
-    }
+  "categories": [
+    "Appetizers",
+    "Main Courses",
+    "Desserts",
+    "Beverages"
   ],
   "tags": [
-    {
-      "id": "1",
-      "name": "Vegan"
-    },
-    {
-      "id": "2",
-      "name": "Gluten-Free"
-    },
-    {
-      "id": "3",
-      "name": "Healthy"
-    },
-    {
-      "id": "4",
-      "name": "Quick Meal"
-    },
-    {
-      "id": "5",
-      "name": "Authentic"
-    }
+    "Vegetarian",
+    "Gluten-Free",
+    "Healthy",
+    "Quick"
   ],
-  "cookingMethods": [
-    {
-      "id": "1",
-      "name": "Baking"
-    },
-    {
-      "id": "2",
-      "name": "Frying"
-    },
-    {
-      "id": "3",
-      "name": "Grilling"
-    },
-    {
-      "id": "4",
-      "name": "Boiling"
-    },
-    {
-      "id": "5",
-      "name": "Steaming"
-    }
+  "cooking_methods": [
+    "Boil",
+    "Grill",
+    "Sauté",
+    "Roast"
   ],
-  "ingredientUnits": [
-    {
-      "id": "1",
-      "name": "Cups"
-    },
-    {
-      "id": "2",
-      "name": "Spoons"
-    },
-    {
-      "id": "3",
-      "name": "Tablespoons"
-    },
-    {
-      "id": "4",
-      "name": "Grams"
-    },
-    {
-      "id": "5",
-      "name": "Kilograms"
-    }
+  "ingredient_measurements": [
+    "teaspoon",
+    "tablespoon",
+    "cup",
+    "ounce",
+    "pound",
+    "slice",
+    "piece",
+    "stick",
+    "jar",
+    "bottle"
   ]
 }

@@ -27,7 +27,7 @@ export default function HowToUsePage() {
             <span className="sm:hidden text-lg font-semibold text-gray-900">Search for a recipe</span>
           </div>
           <div className="card flex-1">
-            <h3 className="hidden sm:block text-xl font-semibold text-gray-900 mb-2">
+            <h3 classNameme="hidden sm:block text-xl font-semibold text-gray-900 mb-2">
               Search for a recipe
             </h3>
             <p className="text-gray-600 mb-2">
