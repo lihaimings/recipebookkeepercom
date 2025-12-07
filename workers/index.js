@@ -2,8 +2,8 @@
 // Auto-generated entry point
 
 import handle_recipe_organiHandler from './handle-recipe-organi.js';
-import process_ingredient_mHandler from './process-ingredient-m.js';
-import generate_meal_plans_Handler from './generate-meal-plans-.js';
+import perform_automatic_inHandler from './perform-automatic-in.js';
+import create_meal_plans_anHandler from './create-meal-plans-an.js';
 
 export default {
   async fetch(request, env) {
@@ -22,8 +22,8 @@ export default {
     
     // Route to handlers
   if (url.pathname === '/api/handle-recipe-organi') return handle_recipe_organiHandler.fetch(request, env);
-  if (url.pathname === '/api/process-ingredient-m') return process_ingredient_mHandler.fetch(request, env);
-  if (url.pathname === '/api/generate-meal-plans-') return generate_meal_plans_Handler.fetch(request, env);
+  if (url.pathname === '/api/perform-automatic-in') return perform_automatic_inHandler.fetch(request, env);
+  if (url.pathname === '/api/create-meal-plans-an') return create_meal_plans_anHandler.fetch(request, env);
     
     return new Response('Not Found', { status: 404 });
   }

@@ -1,32 +1,70 @@
 {
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Grilled Salmon",
+      "description": "Delicious grilled salmon with a side of lemon butter sauce.",
+      "category_id": 2,
+      "tags": [
+        "seafood",
+        "dinner"
+      ],
+      "instructions": "Preheat grill. Season salmon and cook for 8-10 minutes."
+    },
+    {
+      "id": 2,
+      "title": "Pancakes",
+      "description": "Classic American pancakes with a twist.",
+      "category_id": 3,
+      "tags": [
+        "breakfast",
+        "dessert"
+      ],
+      "instructions": "Mix batter, cook in pan until golden."
+    }
+  ],
   "categories": [
-    "Appetizers",
-    "Main Courses",
-    "Desserts",
-    "Beverages"
+    {
+      "id": 1,
+      "name": "Appetizers"
+    },
+    {
+      "id": 2,
+      "name": "Main Courses"
+    },
+    {
+      "id": 3,
+      "name": "Desserts"
+    }
   ],
   "tags": [
-    "Vegetarian",
-    "Gluten-Free",
-    "Healthy",
-    "Quick"
+    {
+      "id": 1,
+      "name": "seafood"
+    },
+    {
+      "id": 2,
+      "name": "dinner"
+    },
+    {
+      "id": 3,
+      "name": "breakfast"
+    },
+    {
+      "id": 4,
+      "name": "dessert"
+    }
   ],
-  "cooking_methods": [
-    "Boil",
-    "Grill",
-    "Sauté",
-    "Roast"
-  ],
-  "ingredient_measurements": [
-    "teaspoon",
-    "tablespoon",
-    "cup",
-    "ounce",
-    "pound",
-    "slice",
-    "piece",
-    "stick",
-    "jar",
-    "bottle"
+  "users": [
+    {
+      "id": 1,
+      "username": "johndoe",
+      "email": "john@example.com"
+    },
+    {
+      "id": 2,
+      "username": "janedoe",
+      "email": "jane@example.com"
+    }
   ]
 }

@@ -23,7 +23,7 @@ export default function FAQPage() {
             What is Recipe Bookkeeper?
           </h3>
           <p className="text-gray-600">
-            Recipe Bookkeeper is a web-based application designed to help home cooks, chefs, and food bloggers manage their recipe collections efficiently. It provides a platform for tracking recipe variations an
+            Recipe Bookkeeper is a web-based application designed to help home cooks, chefs, and food bloggers manage their recipe collections efficiently. It provides a platform for tracking recipe variations and more.
           </p>
         </div>
 

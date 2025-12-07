@@ -90,10 +90,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
+
       {/* CTA Section */}
       <section className="section bg-primary-600">
-        <div className="container-custom text-center">
+        <div className="container-custom">tainer-custom">tainer-custom">tainer-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
