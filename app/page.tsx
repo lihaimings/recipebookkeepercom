@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Check, Repeat, Target, Zap } from "@tabler/icons-react";
+import { IconArrowRight, IconCheck, IconRepeat, IconTarget, IconBolt } from "@tabler/icons-react";
 import ToolComponent from "@/components/tool/ToolComponent";
 
 export default function HomePage() {
@@ -18,7 +18,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
               <a href="#tool" className="btn-primary inline-flex items-center gap-2">
                 Try It Now
-                <ArrowRight className="w-5 h-5" />
+                <IconArrowRight className="w-5 h-5" />
               </a>
               <Link href="/how-to-use" className="btn-secondary">
                 Learn More
@@ -53,7 +53,7 @@ export default function HomePage() {
             
           <div className="card hover:-translate-y-1 transition-transform duration-300">
             <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-              <Repeat className="w-6 h-6 text-primary-600" />
+              <IconRepeat className="w-6 h-6 text-primary-600" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
               Recipe Organization
@@ -65,7 +65,7 @@ export default function HomePage() {
 
           <div className="card hover:-translate-y-1 transition-transform duration-300">
             <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-              <Target className="w-6 h-6 text-primary-600" />
+              <IconTarget className="w-6 h-6 text-primary-600" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
               Automatic Ingredient Measurement Conversion
@@ -77,7 +77,7 @@ export default function HomePage() {
 
           <div className="card hover:-translate-y-1 transition-transform duration-300">
             <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-              <Zap className="w-6 h-6 text-primary-600" />
+              <IconBolt className="w-6 h-6 text-primary-600" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
               Meal Planning and Grocery List Generation
@@ -93,7 +93,7 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="section bg-primary-600">
-        <div className="container-custom">tainer-custom">tainer-custom">tainer-custom text-center">
+        <div className="context-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
@@ -102,7 +102,7 @@ export default function HomePage() {
           </p>
           <a href="#tool" className="inline-flex items-center gap-2 bg-white text-primary-600 font-semibold py-3 px-8 rounded-xl hover:bg-primary-50 transition-colors">
             Try Recipe Bookkeeper Free
-            <ArrowRight className="w-5 h-5" />
+            <IconArrowRight className="w-5 h-5" />
           </a>
         </div>
       </section>

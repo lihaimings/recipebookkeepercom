@@ -29,9 +29,10 @@ export default function HowToUsePage() {
           <div className="card flex-1">
             <h3 className="hidden sm:block text-xl font-semibold text-gray-900 mb-2">
               Generate a grocery list or meal plan
-            </h3>Nameme="hidden sm:block text-xl font-semibold text-gray-900 mb-2">
-              Search for a recipe
             </h3>
+            <p className="hidden sm:block text-xl font-semibold text-gray-900 mb-2">
+              Search for a recipe
+            </p>
             <p className="text-gray-600 mb-2">
               Display a list of matching recipes
             </p>

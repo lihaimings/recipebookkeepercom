@@ -1,6 +1,6 @@
 "use client";
 
-import { AlarmClock } from "@tabler/icons-react";
+import { IconAlarm } from "@tabler/icons-react";
 import Link from "next/link";
 
 interface LogoProps {
@@ -40,7 +40,7 @@ export default function Logo({
     >
       {/* 光泽效果 */}
       <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent" />
-      <AlarmClock className={`${sizes[size].icon} text-white relative z-10`} />
+      <IconAlarm className={`${sizes[size].icon} text-white relative z-10`} />
     </div>
   );
 
