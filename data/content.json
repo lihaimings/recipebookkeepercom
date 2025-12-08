@@ -10,21 +10,21 @@
     },
     {
       "id": 3,
-      "name": "Main Courses"
+      "name": "Soups"
     },
     {
       "id": 4,
-      "name": "Desserts"
+      "name": "Main Courses"
     },
     {
       "id": 5,
-      "name": "Beverages"
+      "name": "Desserts"
     }
   ],
   "tags": [
     {
       "id": 1,
-      "name": "Vegetarian"
+      "name": "Vegan"
     },
     {
       "id": 2,
@@ -32,25 +32,25 @@
     },
     {
       "id": 3,
-      "name": "Healthy"
+      "name": "Low-Carb"
     },
     {
       "id": 4,
-      "name": "Quick Meal"
+      "name": "Healthy"
     },
     {
       "id": 5,
-      "name": "DIY"
+      "name": "Quick"
     }
   ],
   "cooking_methods": [
     {
       "id": 1,
-      "name": "Grilling"
+      "name": "Baking"
     },
     {
       "id": 2,
-      "name": "Baking"
+      "name": "Grilling"
     },
     {
       "id": 3,
@@ -58,11 +58,11 @@
     },
     {
       "id": 4,
-      "name": "Steaming"
+      "name": "Boiling"
     },
     {
       "id": 5,
-      "name": "Roasting"
+      "name": "Sautéing"
     }
   ]
 }

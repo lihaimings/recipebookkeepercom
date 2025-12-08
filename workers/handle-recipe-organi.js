@@ -12,35 +12,26 @@ async function handleRequest(request) {
     'Access-Control-Allow-Headers': 'Content-Type'
   });
 
-  try {
-    if (method === 'OPTIONS') {
-      return new Response(null, { status: 204, headers });
-    }
+  if (method === 'OPTIONS') {
+    return new Response(JSON.stringify({ message: 'CORS preflight' }), { headers, status: 204 });
+  }
 
-    let data;
+  try {
     if (method === 'POST') {
       const body = await request.json();
-      // Process the recipe data
-      data = processRecipe(body);
+      // Handle recipe creation or update logic here
+      return new Response(JSON.stringify({ message: 'Recipe created/updated successfully', data: body }), { headers, status: 201 });
     } else if (method === 'GET') {
-      const category = url.searchParams.get('category');
-      // Fetch recipes by category
-      data = getRecipesByCategory(category);
+      // Handle recipe retrieval logic here
+      const recipes = [
+        { id: 1, name: 'Spaghetti Carbonara', category: 'Pasta' },
+        { id: 2, name: 'Chicken Alfredo', category: 'Pasta' }
+      ];
+      return new Response(JSON.stringify({ message: 'Recipes retrieved successfully', data: recipes }), { headers, status: 200 });
+    } else {
+      return new Response(JSON.stringify({ error: 'Method not allowed' }), { headers, status: 405 });
     }
-
-    return new Response(JSON.stringify(data), { status: 200, headers });
   } catch (error) {
-    console.error(error);
-    return new Response(JSON.stringify({ error: 'Internal Server Error' }), { status: 500, headers });
+    return new Response(JSON.stringify({ error: 'Internal server error', details: error.message }), { headers, status: 500 });
   }
-}
-
-function processRecipe(recipe) {
-  // Implement recipe processing logic
-  return recipe;
-}
-
-function getRecipesByCategory(category) {
-  // Implement category-based recipe fetching logic
-  return [];
 }
