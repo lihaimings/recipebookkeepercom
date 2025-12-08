@@ -1,6 +1,6 @@
 "use client";
 
-import { IconAlarm } from "@tabler/icons-react";
+import { ChefHat } from "lucide-react";
 import Link from "next/link";
 
 interface LogoProps {
@@ -40,7 +40,7 @@ export default function Logo({
     >
       {/* 光泽效果 */}
       <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent" />
-      <IconAlarm className={`${sizes[size].icon} text-white relative z-10`} />
+      <ChefHat className={`${sizes[size].icon} text-white relative z-10`} />
     </div>
   );
 

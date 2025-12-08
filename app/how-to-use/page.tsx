@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react/icons";
+import { ArrowRight } from "lucide-react";
 
 export default function HowToUsePage() {
   return (

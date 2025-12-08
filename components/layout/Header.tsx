@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { IconMenu2, IconX } from "@tabler/icons-react";
+import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Header() {
@@ -46,7 +46,7 @@ export default function Header() {
             className="md:hidden p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <IconX className="w-6 h-6" /> : <IconMenu2 className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
