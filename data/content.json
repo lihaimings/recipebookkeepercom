@@ -1,68 +1,61 @@
 {
+  "recipes": [
+    {
+      "id": "1",
+      "name": "Spaghetti Carbonara",
+      "description": "Classic Italian pasta dish with eggs and Pecorino Romano cheese.",
+      "category_id": "1",
+      "tags": [
+        "Italian",
+        "Pasta",
+        "Quick"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Grilled Salmon",
+      "description": "Simple yet delicious grilled salmon with lemon and herbs.",
+      "category_id": "2",
+      "tags": [
+        "Seafood",
+        "Healthy",
+        "Dinner"
+      ]
+    }
+  ],
   "categories": [
     {
-      "id": 1,
-      "name": "Appetizers"
+      "id": "1",
+      "name": "Italian Recipes"
     },
     {
-      "id": 2,
-      "name": "Salads"
-    },
-    {
-      "id": 3,
-      "name": "Soups"
-    },
-    {
-      "id": 4,
-      "name": "Main Courses"
-    },
-    {
-      "id": 5,
-      "name": "Desserts"
+      "id": "2",
+      "name": "Seafood Dishes"
     }
   ],
   "tags": [
-    {
-      "id": 1,
-      "name": "Vegan"
-    },
-    {
-      "id": 2,
-      "name": "Gluten-Free"
-    },
-    {
-      "id": 3,
-      "name": "Low-Carb"
-    },
-    {
-      "id": 4,
-      "name": "Healthy"
-    },
-    {
-      "id": 5,
-      "name": "Quick"
-    }
+    "Italian",
+    "Pasta",
+    "Quick",
+    "Seafood",
+    "Healthy",
+    "Dinner",
+    "Eggs",
+    "Pecorino Romano",
+    "Grilled",
+    "Lemon"
   ],
-  "cooking_methods": [
-    {
-      "id": 1,
-      "name": "Baking"
-    },
-    {
-      "id": 2,
-      "name": "Grilling"
-    },
-    {
-      "id": 3,
-      "name": "Frying"
-    },
-    {
-      "id": 4,
-      "name": "Boiling"
-    },
-    {
-      "id": 5,
-      "name": "Sautéing"
-    }
-  ]
+  "user_preferences": {
+    "user_id": "1",
+    "favorite_categories": [
+      "1"
+    ],
+    "dietary_restrictions": [
+      "Gluten-Free",
+      "Dairy-Free"
+    ],
+    "preferences": [
+      "Quick Meals"
+    ]
+  }
 }

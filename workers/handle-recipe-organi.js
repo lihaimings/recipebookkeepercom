@@ -8,30 +8,41 @@ async function handleRequest(request) {
   const headers = new Headers({
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, POST',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type'
   });
 
   if (method === 'OPTIONS') {
-    return new Response(JSON.stringify({ message: 'CORS preflight' }), { headers, status: 204 });
+    return new Response(JSON.stringify({ message: 'Options request handled' }), { status: 204, headers });
   }
 
   try {
-    if (method === 'POST') {
+    if (method === 'GET') {
+      const recipes = await getRecipes();
+      return new Response(JSON.stringify(recipes), { status: 200, headers });
+    } else if (method === 'POST') {
       const body = await request.json();
-      // Handle recipe creation or update logic here
-      return new Response(JSON.stringify({ message: 'Recipe created/updated successfully', data: body }), { headers, status: 201 });
-    } else if (method === 'GET') {
-      // Handle recipe retrieval logic here
-      const recipes = [
-        { id: 1, name: 'Spaghetti Carbonara', category: 'Pasta' },
-        { id: 2, name: 'Chicken Alfredo', category: 'Pasta' }
-      ];
-      return new Response(JSON.stringify({ message: 'Recipes retrieved successfully', data: recipes }), { headers, status: 200 });
-    } else {
-      return new Response(JSON.stringify({ error: 'Method not allowed' }), { headers, status: 405 });
+      const recipe = await createRecipe(body);
+      return new Response(JSON.stringify(recipe), { status: 201, headers });
     }
   } catch (error) {
-    return new Response(JSON.stringify({ error: 'Internal server error', details: error.message }), { headers, status: 500 });
+    console.error(error);
+    return new Response(JSON.stringify({ error: 'Internal Server Error' }), { status: 500, headers });
   }
+
+  return new Response(JSON.stringify({ message: 'Method Not Allowed' }), { status: 405, headers });
+}
+
+async function getRecipes() {
+  // Simulate fetching recipes from a database
+  return [
+    { id: 1, name: 'Spaghetti Carbonara', ingredients: ['spaghetti', 'eggs', 'bacon'] },
+    { id: 2, name: 'Caesar Salad', ingredients: ['lettuce', 'croutons', 'parmesan'] }
+  ];
+}
+
+async function createRecipe(recipe) {
+  // Simulate creating a recipe in a database
+  const newId = Math.max(...getRecipes().map(r => r.id), 0) + 1;
+  return { ...recipe, id: newId };
 }

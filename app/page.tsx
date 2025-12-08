@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { IconArrowRight, IconRepeat, IconTarget, IconBolt } from "@tabler/icons-react";
+import { IconArrowRight, IconRepeat, IconTarget, IconBolt } from "lucide-react";
 import ToolComponent from "@/components/tool/ToolComponent";
 
 export default function HomePage() {

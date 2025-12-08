@@ -1,39 +1,31 @@
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
+export default {
+  async fetch(request) {
+    const corsHeaders = {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST',
+      'Access-Control-Allow-Headers': 'Content-Type'
+    };
 
-async function handleRequest(request) {
-  if (request.method !== 'POST') {
-    return new Response('Method Not Allowed', { status: 405 })
+    if (request.method === 'OPTIONS') {
+      return new Response(JSON.stringify({ message: 'CORS preflight request successful' }), {
+        headers: { ...corsHeaders, 'Content-Length': 0 },
+        status: 204
+      });
+    }
+
+    try {
+      const body = await request.json();
+      // Implement meal plan and grocery list generation logic here
+      const response = { message: 'Meal plans and grocery lists generated successfully', data: {} };
+      return new Response(JSON.stringify(response), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        status: 200
+      });
+    } catch (error) {
+      return new Response(JSON.stringify({ error: 'Internal server error' }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        status: 500
+      });
+    }
   }
-
-  const corsHeaders = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type'
-  }
-
-  if (request.headers.get('Origin') !== null) {
-    request = new Request(request.url, {
-      headers: request.headers,
-      method: request.method
-    })
-  }
-
-  try {
-    const body = await request.json()
-    const mealPlan = generateMealPlan(body.recipes)
-    return new Response(JSON.stringify(mealPlan), { status: 200, headers: corsHeaders })
-  } catch (error) {
-    return new Response(JSON.stringify({ error: 'Invalid input' }), { status: 400, headers: corsHeaders })
-  }
-}
-
-function generateMealPlan(recipes) {
-  // Placeholder for meal plan generation logic
-  const mealPlan = recipes.map(recipe => ({
-    name: recipe.name,
-    ingredients: recipe.ingredients
-  }))
-  return mealPlan
-}
+};
